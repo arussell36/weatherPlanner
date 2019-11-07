@@ -5,12 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Planner</title>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    
 </head>
 <body>
     <!-- HEADER (NAME OF THE PLANNER) -->
-
+<header class="headerContainer headerTitle">
+    Weather Planner
+</header>
     <!-- SEARCH INPUT BOX FOR CITY -->
+    <section class="bodyContainer">
+        <div class="bodyIndexContainer">
+            <div class="bodyIndex h1">
+                Find your city:
+                <input id="city"> <i id="search" class="fas fa-search searchB"></i>
+            </div>
+        </div>
+        <div class="bodyContentContainer">
+            <div class="bodyContent h1">
+                <div>
+                    City: <span id="cityName" class="h2"></span>
+                </div>
+                <div>
+                    Temp: <span id="temp" class="h3"></span>
+                </div>
+                <div>
+                    Humidity: <span id="humidity" class="h3"></span>
+                </div>
+                <div>
+                    Wind: <span id="wind" class="h3"></span>
+                </div>
+            </div>
+            <div class="forecastContainer h2">
+                Five Day Planner
+                <div class="forecast">
 
+                </div>
+            </div>
+
+    
         <!-- EVENT WHEN CLICKING SEARCH -->
 
         <!-- LIST OF PREVIOUS CITIES SEARCHED -->
@@ -20,6 +55,9 @@
     <!-- CURRENT WEATHER STATUS OF SEARCHED CITY -->
 
     <!-- WEATHER OUTLOOK FOR 5 DAYS -->
-
+    </section>
+    <script src="https://kit.fontawesome.com/548c66e182.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

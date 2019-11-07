@@ -1,0 +1,114 @@
+/* -----------------------------------ATOMIC CSS------------------------------------------- */
+
+.borderBottom {
+    border-bottom-style: solid;
+
+}
+
+.color1 {
+    background-color: #dff4f3;
+}
+
+.color2 {
+    background-color: #dde7f2;
+}
+
+.color3 {
+    background-color: #b9bbdf;
+}
+
+.color4 {
+    background-color: #878ecd;
+}
+
+.color4 {
+    background-color: #ABACAB;
+}
+
+.color5 {
+    background-color: rgb(126, 218, 145);
+}
+
+
+
+
+.h1 {
+    font-size: 2vh;
+
+}
+
+.h2 {
+    font-size: 3vh;
+}
+
+.h3 {
+    font-size: 2.5vh;
+}
+
+
+
+
+
+
+/* -------------------------------- CLASS BASED CSS------------------------------------------ */
+
+.headerContainer {
+    padding: 2vw 0 2vw 0;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    background-color: #878ecd;
+
+}
+
+.headerTitle {
+    text-align: center;
+    font-size: 6.5vh;
+    
+}
+
+.bodyContainer {
+    display: flex;
+    
+}
+
+.bodyIndexContainer {
+    width: 25vw;
+    height: 100vh;
+    border-right-style: solid;
+    border-right-width: 4px;
+    background-color: #dff4f3;
+}
+
+.bodyIndex {
+    padding: 2vw;
+
+
+}
+
+.bodyContentContainer {
+    width: 75vw;
+    background-color: #ABACAB;
+}
+
+.bodyContent {
+    padding: 1vw;
+
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    
+
+}
+
+.forecastContainer {
+    padding: 1vw;
+}
+
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 0 0 0;
+}
+
