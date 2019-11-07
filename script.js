@@ -24,8 +24,8 @@
     $("#search").on("click", function() {
       // yousuck();
       let cityName = $("#city").val();
-      let cityWeather = `https://openweathermap.org/data/2.5/weather?q=${cityName}&appid=b6907d289e10d714a6e88b30761fae22`;
-      let forecast = `https://openweathermap.org/data/2.5/forecast/daily?q=${cityName}&appid=b6907d289e10d714a6e88b30761fae22`;
+      let cityWeather = `https://openweathermap.org/data/2.5/weather?q=${cityName}&appid=c5f6d6a76e97a0ca948994ffc65a9b3f`;
+      let forecast = `https://openweathermap.org/data/2.5/forecast?q=${cityName},us&appid=c5f6d6a76e97a0ca948994ffc65a9b3f`;
       console.log(forecast);
       let newCity = $("<button>").attr("id", cityName).text(cityName);
       $(".bodyIndex").append(newCity);
