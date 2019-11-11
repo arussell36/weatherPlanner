@@ -26,7 +26,7 @@
       let cityWeather = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=c5f6d6a76e97a0ca948994ffc65a9b3f`;
       let forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName},us&$cnt=5&units=imperial&appid=c5f6d6a76e97a0ca948994ffc65a9b3f`;
       // console.log(cityWeather);
-      let newCity = $("<button>").attr("id","prevSearch").attr("type","button").text(cityName);
+      let newCity = $("<button>").attr("id","prevSearch").attr("type","button").attr("class","cities").text(cityName);
       $(".bodyIndex").append(newCity);
       $(".forecast").html("");
 
