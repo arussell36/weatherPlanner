@@ -39,6 +39,30 @@
           method: "GET"
         }).then((response) => {
           // console.log(response);
+          let lat = response.coord.lat;
+          let lon = response.coord.lon;
+          // console.log(lat);
+          // console.log(lon);
+          let UV = `https://api.openweathermap.org/data/2.5/uvi?appid=c5f6d6a76e97a0ca948994ffc65a9b3f&lat=${lat}&lon=${lon}`;
+          $("#cityName").text(`${response.name}, ${response.sys.country}`);
+          $("#temp").text(`${response.main.temp}°F`);
+          $("#humidity").text(`${response.main.humidity}%`);
+          $("#wind").text(`${response.wind.speed} m/s`);
+
+          $.ajax({
+            url: UV,
+            method: "GET"
+          }).then((response) => {
+            console.log(response);
+            $("#UV").text(`${response.value}`);
+        });
+      });
+
+        $.ajax({
+          url: cityWeather,
+          method: "GET"
+        }).then((response) => {
+          // console.log(response);
           $("#cityName").text(`${response.name}, ${response.sys.country}`);
           $("#temp").text(`${response.main.temp}°F`);
           $("#humidity").text(`${response.main.humidity}%`);
@@ -84,7 +108,7 @@
     $(".bodyIndex").on("click","#prevSearch", function() {
       // yousuck();
     let prevCity = $(this).html();
-    console.log(prevCity)
+    // console.log(prevCity)
     let cityWeather = `https://api.openweathermap.org/data/2.5/weather?q=${prevCity}&units=imperial&appid=c5f6d6a76e97a0ca948994ffc65a9b3f`;
     let forecast = `https://api.openweathermap.org/data/2.5/forecast?q=${prevCity},us&$cnt=5&units=imperial&appid=c5f6d6a76e97a0ca948994ffc65a9b3f`;
     // console.log(cityWeather);
@@ -93,12 +117,23 @@
       url: cityWeather,
       method: "GET"
     }).then((response) => {
+      let lat = response.coord.lat;
+      let lon = response.coord.lon;
       // console.log(response);
       $("#cityName").text(`${response.name}, ${response.sys.country}`);
       $("#temp").text(`${response.main.temp}°F`);
       $("#humidity").text(`${response.main.humidity}%`);
       $("#wind").text(`${response.wind.speed} m/s`);
       $(".forecast").html("");
+      let UV = `https://api.openweathermap.org/data/2.5/uvi?appid=c5f6d6a76e97a0ca948994ffc65a9b3f&lat=${lat}&lon=${lon}`;
+
+      $.ajax({
+        url: UV,
+        method: "GET"
+      }).then((response) => {
+        console.log(response);
+        $("#UV").text(`${response.value}`);
+    });
     });
 
   $.ajax({
